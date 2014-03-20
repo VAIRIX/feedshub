@@ -4,7 +4,7 @@ PATH
     feedshub (0.0.1)
       delayed_job
       delayed_job_active_record
-      feedzirra
+      feedjira
       figaro
       rails (> 4.0.0)
       rest-client
@@ -45,7 +45,13 @@ GEM
       debugger-linecache (~> 1.2)
     chronic (0.10.2)
     columnize (0.3.6)
+    curb (0.8.5)
+    debugger (1.6.6)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.2)
     debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.2)
     delayed_job (4.0.0)
       activesupport (>= 3.0, < 4.1)
     delayed_job_active_record (4.0.0)
@@ -53,18 +59,26 @@ GEM
       delayed_job (>= 3.0, < 4.1)
     diff-lcs (1.2.5)
     erubis (2.7.0)
-    feedzirra (0.8.0)
+    feedjira (1.0.0)
+      curb (~> 0.8.1)
+      loofah (~> 1.2.1)
+      sax-machine (~> 0.2.1)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
     hike (1.2.3)
     i18n (0.6.9)
+    loofah (1.2.1)
+      nokogiri (>= 1.4.4)
+    machinist (2.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -124,6 +138,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  debugger
   feedshub!
+  machinist (>= 2.0.0.beta2)
   rspec-rails
   sqlite3
