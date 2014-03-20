@@ -11,11 +11,8 @@ module Feedshub
         css_manifest = 'app/assets/stylesheets/application.css'
 
         if File.exist?(css_manifest)
-          # Add our own require:
           content = File.read(css_manifest)
-          if content.match(/require_tree\s+\.\s*$/)
-            # Good enough - that'll include our bootstrap_and_overrides.css.less
-          else
+          unless content.match(/require_tree\s+\.\s*$/)
             style_require_block = " *= require feedshub/feeds\n"
             insert_into_file css_manifest, style_require_block, :after => "require_self\n"
           end
