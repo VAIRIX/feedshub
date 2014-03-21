@@ -13,10 +13,6 @@ describe Feedshub::FeedsController do
     context 'check content correctness' do
       render_views
 
-      it 'has to render partial github_feeds' do
-        get :github_feeds
-        expect(response.body).to match /Recent Feeds/
-      end
       it 'has to render partial github_feeds with atom entries' do
         get :github_feeds
         expect(response.body).to match /vairix-dfernandez/
