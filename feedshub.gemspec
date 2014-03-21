@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rest-client', '~> 0'
 
   s.add_development_dependency 'sqlite3', '~> 0'
-  s.add_development_dependency 'byebug', '~> 0'
-  s.add_development_dependency 'rspec-rails', '~> 0'
+  s.add_development_dependency 'rspec-rails', '~> 2.14.1'
   s.add_development_dependency 'machinist', '>= 2.0.0.beta2'
 end
