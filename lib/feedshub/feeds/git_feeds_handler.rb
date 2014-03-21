@@ -1,5 +1,5 @@
 require 'rest_client'
-require 'feedzirra'
+require 'feedjira'
 
 module GitFeedsHandler
 
@@ -13,7 +13,7 @@ module GitFeedsHandler
   end
 
   def self.fetch_and_create_feeds_enrties(links)
-    feeds = Feedzirra::Feed.fetch_and_parse(links)
+    feeds = Feedjira::Feed.fetch_and_parse(links)
     links.each do |link|
       GitFeedsHandler.add_entries(feeds[link].entries)
     end
