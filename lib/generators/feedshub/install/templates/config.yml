@@ -1,1 +1,6 @@
-org_name: 'your_organization'
+# Example of organization feeds:
+# org_name: 'vairix'
+
+# Example of user feeds:
+# user_name: 'vairix-dfernandez'
+user_name: 'vairix-dfernandez'

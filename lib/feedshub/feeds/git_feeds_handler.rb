@@ -20,7 +20,11 @@ module GitFeedsHandler
   end
 
   def self.update_github_feeds
-    links = GitFeedsHandler.retrieve_org_members_links
+    links = if ENV['org_name']
+      GitFeedsHandler.retrieve_org_members_links
+    elsif ENV['user_name']
+      ["#{GITHUB_URL}/#{ENV['user_name']}.atom"]
+    end
     GitFeedsHandler.fetch_and_create_feeds_enrties links
   end
 
