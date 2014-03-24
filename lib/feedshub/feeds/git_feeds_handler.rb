@@ -3,11 +3,11 @@ require 'feedjira'
 
 module GitFeedsHandler
 
-  MEMBERS_API_URL = 'https://api.github.com/orgs/vairix/members'
   GITHUB_URL      = 'https://github.com'
 
   def self.retrieve_org_members_links
-    result = RestClient.get(MEMBERS_API_URL)
+    url           = "https://api.github.com/orgs/#{ENV['org_name']}/members"
+    result        = RestClient.get(url)
     parsed_result = YAML.load(result.gsub(/\=>/, ': '))
     parsed_result.map{ |member| "#{member['html_url']}.atom" }
   end
