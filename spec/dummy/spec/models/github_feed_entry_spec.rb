@@ -21,13 +21,13 @@ describe Feedshub::GithubFeedEntry do
 
     it 'return the MAX permitted size even there are more' do
       feeds_entries
-      expect(Feedshub::GithubFeedEntry.last_added.length).to eq(Feedshub::GithubFeedEntry::LAST_ADDED)
+      expect(Feedshub::GithubFeedEntry.public_feeds.length).to eq(Feedshub::GithubFeedEntry::LAST_ADDED)
     end
 
     it 'returns results in the correct order' do
       feeds_entries
       entry = Feedshub::GithubFeedEntry.make!(published: Time.now + 2.days)
-      expect(Feedshub::GithubFeedEntry.last_added.first.id).to eq(entry.id)
+      expect(Feedshub::GithubFeedEntry.public_feeds.first.id).to eq(entry.id)
     end
   end
 end
