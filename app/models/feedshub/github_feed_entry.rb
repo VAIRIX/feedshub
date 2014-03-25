@@ -3,7 +3,7 @@ module Feedshub
 
     LAST_ADDED = 10
 
-    scope :last_added, -> { order(published: :desc).limit(LAST_ADDED) }
+    scope :last_added, -> { order('published DESC').limit(LAST_ADDED) }
 
   end
 end

@@ -19,10 +19,25 @@ module Feedshub
         else
           copy_file 'application.css', 'app/assets/stylesheets/application.css'
         end
+
+        js_manifest = 'app/assets/javascripts/application.js'
+        if File.exist?(js_manifest)
+          content = File.read(js_manifest)
+          unless content.match(/require_tree\s+\.\s*$/)
+            js_require_block = ' //= require feedshub/feeds\n'
+            append_to_file js_manifest, js_require_block
+          end
+        else
+          copy_file 'application.js', 'app/assets/javascripts/application.js'
+        end
       end
 
       def add_styles
         copy_file 'feeds.css', 'app/assets/stylesheets/feedshub/feeds.css'
+      end
+
+      def add_scripts
+        copy_file 'feeds.js', 'app/assets/javascripts/feedshub/feeds.js'
       end
 
       def add_config

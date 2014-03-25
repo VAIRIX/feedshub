@@ -33,15 +33,15 @@ module GitFeedsHandler
   def self.add_entries(entries)
     entries.each do |entry|
       unless Feedshub::GithubFeedEntry.where(entry_id: entry.entry_id).first
-        Feedshub::GithubFeedEntry.create!(
-          entry_id:  entry.entry_id,
-          published: entry.published,
-          updated:   entry.updated,
-          url:       entry.url,
-          title:     entry.title,
-          author:    entry.author,
-          content:   GitFeedsHandler.process_content(entry.content)
-        )
+        feed_entry = Feedshub::GithubFeedEntry.new
+        feed_entry.entry_id = entry.entry_id
+        feed_entry.published = entry.published
+        feed_entry.updated = entry.updated
+        feed_entry.url = entry.url
+        feed_entry.title = entry.title
+        feed_entry.author = entry.author
+        feed_entry.content = GitFeedsHandler.process_content(entry.content)
+        feed_entry.save!
       end
     end
   end

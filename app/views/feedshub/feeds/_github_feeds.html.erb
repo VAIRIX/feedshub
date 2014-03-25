@@ -2,7 +2,7 @@
   <% @entries.each do |entry| %>
     <div class="alert issues_comment">
       <div class="body">
-        <%= entry.content.html_safe %>
+        <%= entry.content.html_safe unless entry.content.blank?%>
       </div>
     </div>
   <% end %>
