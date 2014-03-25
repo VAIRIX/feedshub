@@ -32,7 +32,7 @@ module GitFeedsHandler
 
   def self.add_entries(entries)
     entries.each do |entry|
-      unless Feedshub::GithubFeedEntry.find_by(entry_id: entry.entry_id)
+      unless Feedshub::GithubFeedEntry.where(entry_id: entry.entry_id).first
         Feedshub::GithubFeedEntry.create!(
           entry_id:  entry.entry_id,
           published: entry.published,
