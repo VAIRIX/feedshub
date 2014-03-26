@@ -1,6 +1,8 @@
 # Example of organization feeds:
-# org_name: 'vairix'
+org_name: 'vairix'
 
 # Example of user feeds:
 # user_name: 'vairix-dfernandez'
-user_name: 'vairix-dfernandez'
+
+#Set the default number of feeds to retrieve (if no amount set by paameter)
+github_feeds_number: '10'

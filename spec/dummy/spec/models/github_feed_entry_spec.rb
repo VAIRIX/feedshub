@@ -19,9 +19,14 @@ describe Feedshub::GithubFeedEntry do
       end
     end
 
-    it 'return the MAX permitted size even there are more' do
+    it 'return the MAX permitted size even there are more (without parameter)' do
       feeds_entries
       expect(Feedshub::GithubFeedEntry.public_feeds.length).to eq(Feedshub::GithubFeedEntry::LAST_ADDED)
+    end
+
+    it 'return the MAX permitted size even there are more (with parameter equals 20)' do
+      feeds_entries
+      expect(Feedshub::GithubFeedEntry.public_feeds(20).length).to eq(Feedshub::GithubFeedEntry::LAST_ADDED + 2)
     end
 
     it 'returns results in the correct order' do
