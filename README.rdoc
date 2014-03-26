@@ -71,7 +71,11 @@ Include the helper reference in the view controller
 
 In your view, call the helper as shown below
 
+== Screenshots
 
+This is the default style of Feedshub.
+
+http://vairix.com/assets/feedshub.png
 
 == License
 
