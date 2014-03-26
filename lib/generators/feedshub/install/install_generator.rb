@@ -48,7 +48,7 @@ module Feedshub
       end
 
       def run_tasks
-        exec('rake feedshub:install:migrations && rake feeds:whenverize')
+        exec('rake feedshub:install:migrations && rake feeds:whenverize development')
       end
 
     end

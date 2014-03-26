@@ -6,8 +6,9 @@ namespace :feeds do
     GitFeedsHandler.update_github_feeds
   end
 
-  task whenverize: :environment do
-    exec("cd #{Feedshub::Engine.root} && whenever -i -s 'path=#{Rails.root}'")
+  task :whenverize do
+    env = ARGV.last
+    exec("cd #{Feedshub::Engine.root} && whenever -i -s 'path=#{Rails.root}' -r #{env}")
   end
 
 end
