@@ -51,13 +51,16 @@ rake db:migrate
 
 To customize the behaviour of the gem you have to edit <code>/config/feedshub/config.yml</code>
 
-<code>
-# Example of organization feeds:
-# org_name: 'vairix'
+  #Example of organization feeds:
+  org_name: 'vairix'
 
-# Example of user feeds:
-# user_name: 'vairix-dfernandez'
-</code>
+  #Example of user feeds:
+
+  #user_name: 'vairix-dfernandez'
+
+  #Set the default number of feeds to retrieve (if no amount set by paameter)
+
+  github_feeds_number: '10'
 
 == How to integrate it?
 
