@@ -6,7 +6,8 @@ namespace :feeds do
     GitFeedsHandler.update_github_feeds
   end
 
-  task :whenverize do
+  desc 'add cron task to update feeds'
+  task whenverize: :environment do
     env = ARGV.last
     exec("cd #{Feedshub::Engine.root} && whenever -i -s 'path=#{Rails.root}' -r #{env}")
   end
