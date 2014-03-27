@@ -85,7 +85,8 @@ In your view, call the helper as shown below
 
 This is the default style of Feedshub.
 
-http://vairix.com/assets/feedshub.png
+![Feeds](http://vairix.com/assets/feedshub.png)
+
 
 ## License
 
