@@ -6459,10 +6459,6 @@
 #github_feeds .dashboard-sidebar .repos-contributions .css-truncate-target {
     max-width: 220px;
 }
-#github_feeds.news {
-    float: left;
-    width: 620px;
-}
 #github_feeds.news .release {
     margin-top: 0;
     margin-bottom: 0;
