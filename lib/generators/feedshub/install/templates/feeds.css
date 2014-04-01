@@ -1,9 +1,9 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'octicons';
   src: url('/assets/feedshub/octicons.woff') format('woff');
 }
-@charset "UTF-8";
-    .container {
+.container {
     width: 980px;
     margin-left: auto;
     margin-right: auto;
@@ -724,7 +724,6 @@
     display: none;
     position: absolute;
     z-index: 1000000;
-    pointer-events: none;
 }
 #github_feeds .tooltipped:after {
     content: attr(aria-label);
@@ -839,7 +838,6 @@
 #github_feeds .tooltipped-multiline:after {
     word-wrap: initial;
     white-space: pre-line;
-    word-break: break-word;
     max-width: 250px;
     border-collapse: initial;
     width: -moz-max-content;
@@ -852,12 +850,9 @@
     right: initial;
     left: 50%}
 #github_feeds .tooltipped-multiline.tooltipped-w:after, .tooltipped-multiline.tooltipped-e:after {
-    right: 100%}
-#github_feeds @media screen and (min-width: 0 \0) {
-    .tooltipped-multiline: after {
-    width: 250px;
+    right: 100%
 }
-#github_feeds }#github_feeds .tooltipped-sticky:before, .tooltipped-sticky:after {
+#github_feeds .tooltipped-sticky:before, .tooltipped-sticky:after {
     display: inline-block;
 }
 #github_feeds .tooltipped-sticky.tooltipped-multiline:after {
@@ -896,7 +891,6 @@
     border-left-color: rgba(255, 255, 255, 0.8);
 }
 #github_feeds .code-frequency .addition {
-    fill-opacity: 1;
     fill: #6cc644;
 }
 #github_feeds .code-frequency .deletion {
@@ -2305,13 +2299,6 @@
 #github_feeds .flash-title {
     margin-top: 0;
     margin-bottom: 5px;
-}
-#github_feeds @font-face {
-    font-family: 'octicons';
-    src: url("/assets/octicons-0bb4a5129262e9b3a5aab81b5723586cc105b387.eot");
-    src: url("/assets/octicons-0bb4a5129262e9b3a5aab81b5723586cc105b387.eot#iefix") format("embedded-opentype"), url("/assets/octicons-d549163bd3eadcee80c641d30b6e3bbce07db469.woff") format("woff"), url("/assets/octicons-e8799dda501b567e3851a9ff2324496e58f9342c.ttf") format("truetype"), url("/assets/octicons-5bd882ea52a4e94bb62862655dbff5f85d238281.svg#octicons") format("svg");
-    font-weight: normal;
-    font-style: normal;
 }
 #github_feeds .octicon {
     font: normal normal 16px octicons;
@@ -4278,11 +4265,7 @@
 #github_feeds .featured-collection-carousel .slide-right {
     right: -60px;
 }
-#github_feeds @media only screen and (max-width: 1155px) {
-    .slide-left, .slide-right {
-    display: none;
-}
-#github_feeds }#github_feeds .chromed-list-browser {
+#github_feeds .chromed-list-browser {
     position: relative;
     margin-bottom: 8px;
     float: left;
@@ -6380,8 +6363,13 @@
     text-align: right;
     margin: 5px 0;
 }
-#github_feeds @-webkit-keyframes broadCastMaskFade {
-    0% {
+#github_feeds 30% {
+    opacity: 1;
+}
+#github_feeds 70% {
+    opacity: 1;
+}
+#github_feeds 100% {
     opacity: 0;
 }
 #github_feeds 30% {
@@ -6393,20 +6381,7 @@
 #github_feeds 100% {
     opacity: 0;
 }
-#github_feeds }#github_feeds @keyframes broadCastMaskFade {
-    0% {
-    opacity: 0;
-}
-#github_feeds 30% {
-    opacity: 1;
-}
-#github_feeds 70% {
-    opacity: 1;
-}
-#github_feeds 100% {
-    opacity: 0;
-}
-#github_feeds }#github_feeds .github-jobs-promotion {
+#github_feeds .github-jobs-promotion {
     margin-bottom: 15px;
 }
 #github_feeds .github-jobs-promotion p {
@@ -8649,12 +8624,7 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
-#github_feeds @media only screen and (-webkit-min-device-pixel-ratio: 2),  only screen and (min--moz-device-pixel-ratio: 2),  only screen and (-o-min-device-pixel-ratio: 2 / 1),  only screen and (min-device-pixel-ratio: 2),  only screen and (min-resolution: 2dppx) {
-    .facebox-loading {
-    background-image: url("/images/spinners/octocat-spinner-128.gif?c37a4bfb");
-    background-size: 64px 64px;
-}
-#github_feeds }#github_feeds .facebox-header {
+#github_feeds .facebox-header {
     margin: -15px -15px 15px;
     padding: 15px;
     font-size: 18px;
@@ -9356,12 +9326,7 @@
 #github_feeds .homepage .header-logged-out .primary {
     display: none;
 }
-#github_feeds @media only screen and (-webkit-min-device-pixel-ratio: 2),  only screen and (min--moz-device-pixel-ratio: 2),  only screen and (-o-min-device-pixel-ratio: 2 / 1),  only screen and (min-device-pixel-ratio: 2),  only screen and (min-resolution: 2dppx) {
-    .form-signup-home dl.is-loading: after {
-    background-image: url("/images/spinners/octocat-spinner-32.gif?e23f1eed");
-    background-size: 16px 16px;
-}
-#github_feeds }#github_feeds .text-muted {
+#github_feeds .text-muted {
     color: #999;
 }
 #github_feeds .text-center {
@@ -10105,21 +10070,13 @@
     -webkit-animation: ellipsis 1s infinite;
     -moz-animation: ellipsis 1s infinite;
 }
-#github_feeds @-webkit-keyframes ellipsis {
-    from {
-    width: 2px;
+#github_feeds to {
+    width: 12px;
 }
 #github_feeds to {
     width: 12px;
 }
-#github_feeds }#github_feeds @-moz-keyframes ellipsis {
-    from {
-    width: 2px;
-}
-#github_feeds to {
-    width: 12px;
-}
-#github_feeds }#github_feeds .large-loading-area {
+#github_feeds .large-loading-area {
     text-align: center;
     padding: 100px 0;
 }
