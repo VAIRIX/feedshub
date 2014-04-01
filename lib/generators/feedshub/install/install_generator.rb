@@ -47,8 +47,12 @@ module Feedshub
         append_to_file 'config/application.rb', env_update
       end
 
+      def copy_schedule
+        copy_file 'schedule.rb', 'config/feedshub/schedule.rb'
+      end
+
       def run_tasks
-        exec('rake feedshub:install:migrations && rake feeds:whenverize development')
+        exec('rake feedshub:install:migrations && rake feeds:schedule')
       end
 
     end
