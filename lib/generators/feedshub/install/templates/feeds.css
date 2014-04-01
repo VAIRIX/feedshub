@@ -3706,12 +3706,7 @@
     margin-right: 15px;
     background: url("/images/spinners/octocat-spinner-32.gif?e23f1eed") no-repeat;
 }
-#github_feeds @media only screen and (-webkit-min-device-pixel-ratio: 2),  only screen and (min--moz-device-pixel-ratio: 2),  only screen and (-o-min-device-pixel-ratio: 2 / 1),  only screen and (min-device-pixel-ratio: 2),  only screen and (min-resolution: 2dppx) {
-    .branch-action-body .spinner {
-    background-image: url("/images/spinners/octocat-spinner-64.gif?55517cc1");
-    background-size: 32px 32px;
-}
-#github_feeds }#github_feeds .merge-branch-form {
+#github_feeds .merge-branch-form {
     display: none;
     margin: 15px 0;
 }
