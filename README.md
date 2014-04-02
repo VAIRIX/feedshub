@@ -62,12 +62,14 @@ To customize the behaviour of the gem you have to edit ```/config/feedshub/confi
 
   github_feeds_number: '10'
 ```
-### Production
+And also edit ```/config/feedshub/schedule.rb``` to customize the period of feeds updates.
+Feedshub use whenever Gem to schedule the updates of feeds. For more information visit <https://github.com/javan/whenever>
 
-To generate the schedule task in production environment, run:
+
+To generate the schedule task, run:
 
 ```bash
-rake feeds:whenverize production
+RAILS_ENV=your_environment rake feeds:schedule
 ```
 
 You need to do this to keep updated feeds.
@@ -78,8 +80,15 @@ The integration is done using a helper that will render the public activity wher
 In order to do it you have to:
 
 Include the helper reference in the view controller
+```ruby helper Feedshub::FeedsHelper```
 
 In your view, call the helper as shown below
+
+```html
+<%= github_feeds %>
+```
+
+By calling the helper without parameter, it will display the number of feeds specified in the configuration. You can add a parameter (ie.:```<%= github_feeds 50 %>```) to specify the number of feeds to show in the view.
 
 ## Screenshots
 
