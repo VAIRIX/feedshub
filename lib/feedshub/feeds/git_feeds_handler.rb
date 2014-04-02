@@ -13,7 +13,8 @@ module GitFeedsHandler
   end
 
   def self.fetch_and_create_feeds_enrties(links)
-    feeds = Feedjira::Feed.fetch_and_parse(links)
+    parse_links = links.dup
+    feeds = Feedjira::Feed.fetch_and_parse(parse_links)
     links.each do |link|
       GitFeedsHandler.add_entries(feeds[link].entries)
     end
