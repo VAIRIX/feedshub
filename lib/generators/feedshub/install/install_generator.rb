@@ -54,7 +54,7 @@ module Feedshub
       end
 
       def run_tasks
-        exec('rake feedshub:install:migrations && rake feeds:schedule')
+        exec('rake feedshub:install:migrations')
       end
 
     end
