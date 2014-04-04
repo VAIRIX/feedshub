@@ -2,7 +2,6 @@ require 'spec_helper'
 require 'feedshub/feeds/git_feeds_handler'
 
 describe Feedshub::FeedsHelper do
-  #helper Feedshub::FeedsHelper
 
   describe 'github_feeds' do
 

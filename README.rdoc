@@ -1,4 +1,4 @@
-=== Feedshub
+= Feedshub
 
 Feedshub is a full RoR gem that let you show your company or personal github activity in a fancy way with minimal configuration. It:
 
@@ -58,9 +58,21 @@ To customize the behaviour of the gem you have to edit <code>/config/feedshub/co
 
   #user_name: 'vairix-dfernandez'
 
-  #Set the default number of feeds to retrieve (if no amount set by paameter)
+  #Set the default number of feeds to retrieve (if no amount set by pameter)
 
   github_feeds_number: '10'
+
+And also edit <code>/config/feedshub/schedule.rb</code> to customize the period of feeds updates.
+Feedshub use whenever Gem to schedule the updates of feeds. For more information visit <https://github.com/javan/whenever>
+
+
+To generate the schedule task, run:
+
+<code>
+RAILS_ENV=your_environment rake feeds:schedule
+</code>
+
+You need to do this to keep updated feeds.
 
 == How to integrate it?
 
@@ -68,14 +80,22 @@ The integration is done using a helper that will render the public activity wher
 In order to do it you have to:
 
 Include the helper reference in the view controller
+<code>ruby helper Feedshub::FeedsHelper</code>
 
 In your view, call the helper as shown below
+
+<code>
+<%= github_feeds %>
+</code>
+
+By calling the helper without parameter, it will display the number of feeds specified in the configuration. You can add a parameter (ie.:<code><%= github_feeds 50 %></code>) to specify the number of feeds to show in the view.
 
 == Screenshots
 
 This is the default style of Feedshub.
 
 http://vairix.com/assets/feedshub.png
+
 
 == License
 

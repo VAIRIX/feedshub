@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Feedshub::VERSION
   s.authors     = 'VAIRIX'
   s.email       = 'info@vairix.com'
-  s.homepage    = 'http://www.vairix.com'
+  s.homepage    = 'https://github.com/VAIRIX/feedshub'
   s.summary     = 'Created to easily integrate Github public feeds in your app'
-  s.description = 'You just need to follow the instruction and use the helppers and views we provide, to integrate Github public feeds in your app'
+  s.description = 'Feedshub is a full RoR gem that let you show your company or personal github activity in a fancy way with minimal configuration.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.rdoc']

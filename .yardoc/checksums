@@ -1,0 +1,9 @@
+lib/feedshub.rb 8cc29d0acf08d1c25657818353335723f36dbf7c
+lib/feedshub/engine.rb f782bdce5b9b8fb789504189c770048abffc6ef1
+lib/feedshub/version.rb d4f32adc43e74ce3eb298f6d6f9de3eaf8fda66a
+app/helpers/feedshub/feeds_helper.rb c6efe12ed13254df18b6c6c5792e4bd7eb931c76
+lib/feedshub/feeds/git_feeds_handler.rb 5821f108604a46d13579371a160e493dfab75c14
+app/models/feedshub/github_feed_entry.rb a8f0f121719f50705094ad0ea397db50ce158404
+app/helpers/feedshub/application_helper.rb 4c00d12909bdf9b4e88aab731949684bd1775114
+lib/generators/feedshub/install/install_generator.rb 1ce86bd536ad1849eb14b77a5f0c81c9b96c5a90
+lib/generators/feedshub/install/templates/schedule.rb 0fb16f4326cbebb9acfa1542306e831a7bf2d056
